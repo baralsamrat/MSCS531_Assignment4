@@ -1,0 +1,340 @@
+{
+    "type": "Root",
+    "cxx_class": "gem5::Root",
+    "name": null,
+    "path": "root",
+    "eventq_index": 0,
+    "full_system": false,
+    "sim_quantum": 0,
+    "time_sync_enable": false,
+    "time_sync_period": 100000000000,
+    "time_sync_spin_threshold": 100000000,
+    "system": {
+        "type": "System",
+        "cxx_class": "gem5::System",
+        "name": "system",
+        "path": "system",
+        "auto_unlink_shared_backstore": false,
+        "cache_line_size": 64,
+        "eventq_index": 0,
+        "exit_on_work_items": false,
+        "init_param": 0,
+        "m5ops_base": 0,
+        "mem_mode": "atomic",
+        "mem_ranges": [
+            "0:536870912"
+        ],
+        "memories": [],
+        "mmap_using_noreserve": false,
+        "multi_thread": false,
+        "num_work_ids": 16,
+        "readfile": "",
+        "redirect_paths": [],
+        "shadow_rom_ranges": [],
+        "shared_backstore": "",
+        "symbolfile": "",
+        "thermal_components": [],
+        "thermal_model": null,
+        "work_begin_ckpt_count": 0,
+        "work_begin_cpu_id_exit": -1,
+        "work_begin_exit_count": 0,
+        "work_cpus_ckpt_count": 0,
+        "work_end_ckpt_count": 0,
+        "work_end_exit_count": 0,
+        "work_item_id": -1,
+        "workload": {
+            "type": "StubWorkload",
+            "cxx_class": "gem5::StubWorkload",
+            "name": "workload",
+            "path": "system.workload",
+            "byte_order": "little",
+            "entry": 0,
+            "eventq_index": 0,
+            "remote_gdb_port": "#7000",
+            "wait_for_remote_gdb": false
+        },
+        "clk_domain": {
+            "type": "SrcClockDomain",
+            "cxx_class": "gem5::SrcClockDomain",
+            "name": "clk_domain",
+            "path": "system.clk_domain",
+            "clock": [
+                1000
+            ],
+            "domain_id": -1,
+            "eventq_index": 0,
+            "init_perf_level": 0,
+            "voltage_domain": {
+                "type": "VoltageDomain",
+                "cxx_class": "gem5::VoltageDomain",
+                "name": "voltage_domain",
+                "path": "system.clk_domain.voltage_domain",
+                "eventq_index": 0,
+                "voltage": [
+                    1.0
+                ]
+            }
+        },
+        "cpu": {
+            "type": "BaseAtomicSimpleCPU",
+            "cxx_class": "gem5::AtomicSimpleCPU",
+            "name": "cpu",
+            "path": "system.cpu",
+            "branchPred": null,
+            "checker": null,
+            "clk_domain": "system.clk_domain",
+            "cpu_id": -1,
+            "decoder": [
+                {
+                    "type": "X86Decoder",
+                    "cxx_class": "gem5::X86ISA::Decoder",
+                    "name": "decoder",
+                    "path": "system.cpu.decoder",
+                    "eventq_index": 0,
+                    "isa": "system.cpu.isa"
+                }
+            ],
+            "do_checkpoint_insts": true,
+            "do_statistics_insts": true,
+            "eventq_index": 0,
+            "function_trace": false,
+            "function_trace_start": 0,
+            "interrupts": [],
+            "isa": [
+                {
+                    "type": "X86ISA",
+                    "cxx_class": "gem5::X86ISA::ISA",
+                    "name": "isa",
+                    "path": "system.cpu.isa",
+                    "APMInfo": [
+                        2147483672,
+                        1752462657,
+                        1769238117,
+                        1145913699
+                    ],
+                    "CacheParams": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "ExtendedFeatures": [
+                        0,
+                        25165824,
+                        0,
+                        0
+                    ],
+                    "ExtendedState": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "FamilyModelStepping": [
+                        134993,
+                        2053,
+                        4024171519,
+                        521
+                    ],
+                    "FamilyModelSteppingBrandFeatures": [
+                        134993,
+                        1029,
+                        3956538367,
+                        131073
+                    ],
+                    "L1CacheAndTLB": [
+                        4278779656,
+                        4280352544,
+                        1073873216,
+                        1073873216
+                    ],
+                    "L2L3CacheAndL2TLB": [
+                        0,
+                        1107313152,
+                        0,
+                        67141952
+                    ],
+                    "LongModeAddressSize": [
+                        12336,
+                        0,
+                        0,
+                        0
+                    ],
+                    "eventq_index": 0,
+                    "name_string": "Fake gem5 x86_64 CPU",
+                    "vendor_string": "HygonGenuine"
+                }
+            ],
+            "max_insts_all_threads": 0,
+            "max_insts_any_thread": 0,
+            "mmu": {
+                "type": "X86MMU",
+                "cxx_class": "gem5::X86ISA::MMU",
+                "name": "mmu",
+                "path": "system.cpu.mmu",
+                "dtb": {
+                    "type": "X86TLB",
+                    "cxx_class": "gem5::X86ISA::TLB",
+                    "name": "dtb",
+                    "path": "system.cpu.mmu.dtb",
+                    "entry_type": "data",
+                    "eventq_index": 0,
+                    "next_level": null,
+                    "size": 64,
+                    "system": "system",
+                    "walker": {
+                        "type": "X86PagetableWalker",
+                        "cxx_class": "gem5::X86ISA::Walker",
+                        "name": "walker",
+                        "path": "system.cpu.mmu.dtb.walker",
+                        "clk_domain": "system.clk_domain",
+                        "eventq_index": 0,
+                        "num_squash_per_cycle": 4,
+                        "power_model": [],
+                        "power_state": {
+                            "type": "PowerState",
+                            "cxx_class": "gem5::PowerState",
+                            "name": "power_state",
+                            "path": "system.cpu.mmu.dtb.walker.power_state",
+                            "clk_gate_bins": 20,
+                            "clk_gate_max": 1000000000000,
+                            "clk_gate_min": 1000,
+                            "default_state": "UNDEFINED",
+                            "eventq_index": 0,
+                            "leaders": [],
+                            "possible_states": []
+                        },
+                        "system": "system"
+                    }
+                },
+                "eventq_index": 0,
+                "itb": {
+                    "type": "X86TLB",
+                    "cxx_class": "gem5::X86ISA::TLB",
+                    "name": "itb",
+                    "path": "system.cpu.mmu.itb",
+                    "entry_type": "instruction",
+                    "eventq_index": 0,
+                    "next_level": null,
+                    "size": 64,
+                    "system": "system",
+                    "walker": {
+                        "type": "X86PagetableWalker",
+                        "cxx_class": "gem5::X86ISA::Walker",
+                        "name": "walker",
+                        "path": "system.cpu.mmu.itb.walker",
+                        "clk_domain": "system.clk_domain",
+                        "eventq_index": 0,
+                        "num_squash_per_cycle": 4,
+                        "power_model": [],
+                        "power_state": {
+                            "type": "PowerState",
+                            "cxx_class": "gem5::PowerState",
+                            "name": "power_state",
+                            "path": "system.cpu.mmu.itb.walker.power_state",
+                            "clk_gate_bins": 20,
+                            "clk_gate_max": 1000000000000,
+                            "clk_gate_min": 1000,
+                            "default_state": "UNDEFINED",
+                            "eventq_index": 0,
+                            "leaders": [],
+                            "possible_states": []
+                        },
+                        "system": "system"
+                    }
+                }
+            },
+            "numThreads": 1,
+            "power_gating_on_idle": false,
+            "power_model": [],
+            "power_state": {
+                "type": "PowerState",
+                "cxx_class": "gem5::PowerState",
+                "name": "power_state",
+                "path": "system.cpu.power_state",
+                "clk_gate_bins": 20,
+                "clk_gate_max": 1000000000000,
+                "clk_gate_min": 1000,
+                "default_state": "UNDEFINED",
+                "eventq_index": 0,
+                "leaders": [],
+                "possible_states": [
+                    "ON",
+                    "CLK_GATED",
+                    "OFF"
+                ]
+            },
+            "progress_interval": 0,
+            "pwr_gating_latency": 300,
+            "simpoint_start_insts": [],
+            "simulate_data_stalls": false,
+            "simulate_inst_stalls": false,
+            "socket_id": 0,
+            "switched_out": false,
+            "syscallRetryLatency": 10000,
+            "system": "system",
+            "tracer": {
+                "type": "ExeTracer",
+                "cxx_class": "gem5::trace::ExeTracer",
+                "name": "tracer",
+                "path": "system.cpu.tracer",
+                "disassembler": {
+                    "type": "InstDisassembler",
+                    "cxx_class": "gem5::trace::InstDisassembler",
+                    "name": "disassembler",
+                    "path": "system.cpu.tracer.disassembler",
+                    "eventq_index": 0
+                },
+                "eventq_index": 0
+            },
+            "width": 1,
+            "workload": [
+                {
+                    "type": "Process",
+                    "cxx_class": "gem5::Process",
+                    "name": "workload",
+                    "path": "system.cpu.workload",
+                    "cmd": [
+                        "/Users/labaik/Documents/development/gem5/tests/test-progs/hello/bin/x86/linux/hello"
+                    ],
+                    "cwd": "/Users/labaik/Documents/GitHub/MSCS531_Assignment4/src",
+                    "drivers": [],
+                    "egid": 100,
+                    "env": [],
+                    "errout": "cerr",
+                    "euid": 100,
+                    "eventq_index": 0,
+                    "executable": "",
+                    "gid": 100,
+                    "input": "cin",
+                    "kvmInSE": false,
+                    "maxStackSize": 67108864,
+                    "output": "cout",
+                    "pgid": 100,
+                    "pid": 1,
+                    "ppid": 0,
+                    "release": "5.1.0",
+                    "simpoint": 0,
+                    "system": "system",
+                    "uid": 100,
+                    "useArchPT": false
+                }
+            ]
+        },
+        "dvfs_handler": {
+            "type": "DVFSHandler",
+            "cxx_class": "gem5::DVFSHandler",
+            "name": "dvfs_handler",
+            "path": "system.dvfs_handler",
+            "domains": [],
+            "enable": false,
+            "eventq_index": 0,
+            "sys_clk_domain": "system.clk_domain",
+            "transition_latency": 100000000
+        }
+    }
+}
